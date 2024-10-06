@@ -84,11 +84,21 @@ main {
     padding-right: 20px;
 }
 
+.about-image {
+    width: 300px; /* Set width for the circular container */
+    height: 300px; /* Set height for the circular container */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 50%; /* Make the container circular */
+    display: flex; /* Center the image */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: #333; /* Optional: Background color for better visibility */
+}
+
 .about-image img {
-    max-width: 100%;
-    height: auto;
-    width: 300px;
-    border-radius: 50%;
+    width: 100%; /* Image fills the circular container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
 }
 
 #skills {
@@ -96,7 +106,6 @@ main {
     color: #f4f4f4;
     padding: 20px;
     margin: 20px 0;
-    text-align: center;
 }
 
 /* Footer */
@@ -130,17 +139,17 @@ footer {
     }
 
     .about-image img {
-        width: 100%;
-        max-width: 300px;
+        width: 100%; /* Full width on mobile */
+        max-width: 300px; /* Limit max width */
     }
 }
 
 @media (max-width: 480px) {
     .about-image img {
-        width: 150px;
+        width: 150px; /* Smaller image on very small screens */
     }
 
     footer {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Smaller footer text */
     }
 }
