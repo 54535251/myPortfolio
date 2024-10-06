@@ -1,12 +1,11 @@
-/* General Reset for margin and padding */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width:100%;
 }
 
-/* Style the body */
+/* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -14,40 +13,62 @@ body {
     line-height: 1.6;
 }
 
-
-
+/* Fixed Header */
 #fixed-header {
     position: fixed;
-    text-align: center;
-    width: 100%;
+    width: calc(100% - 220px); /* Adjust for contact section on the left */
+    left: 220px; /* Offset for the sidebar */
     top: 0;
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
+    z-index: 1000;
     text-align: center;
 }
 
+/* Main Header */
 #s-header {
-    margin: 50px;
+    margin-top: 100px;
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
-    width: 100%;
-}
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
 }
 
-/* Style for the main section */
-main {
+/* Left Sidebar for Contact */
+#contact-section {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: white;
     padding: 20px;
+    z-index: 1000;
 }
 
-
-section {
+#contact-section h2 {
     margin-bottom: 20px;
+}
+
+#contact-section p {
+    margin-bottom: 15px;
+}
+
+#contact-section a {
+    color: aqua;
+    text-decoration: none;
+}
+
+#contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Offset */
+main {
+    margin-left: 220px; /* Offset to make space for contact sidebar */
+    padding: 20px;
 }
 
 .about-section {
@@ -55,44 +76,27 @@ section {
     align-items: center;
     justify-content: space-between;
     margin: 20px;
+    padding: 30px;
     background-color: black;
     color: aqua;
 }
 
 .about-text {
     flex: 1;
-    padding-right: 20px; /* Adds some space between text and image */
+    padding-right: 20px;
 }
 
 .about-image img {
     max-width: 100%;
     height: 300px;
-    width: 300px; /* Adjust width based on your design */
-    border-radius: 50%; 
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 #skills {
     background-color: rgb(10, 10, 10);
     color: #f4f4f4;
     padding: 30px;
-}
-#Contacts {
-    background-color: black;
-    color: blueviolet;
-    padding: 30px;
-}
-
-
-/* Basic footer style */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    bottom: 0;
-}
-
-p {
-    font-size: 1.1rem;
+    margin: 20px; /* Ensure equal spacing with other sections */
 }
